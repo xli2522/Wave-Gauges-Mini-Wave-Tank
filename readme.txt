@@ -235,7 +235,7 @@ List of functions:
 read_analog_wave.ino
 
 	void setup()
-	Sets up the ports and LCD
+	Sets up the port and LCD
 
 	void loop()
 	Generates a string with data information for probe1 and probe2 and export to serial output window.
