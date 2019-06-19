@@ -11,23 +11,23 @@ How this system work:
                                                         \ /
                                                          ^
 What Arduino board does:
-(1) Load SD card
-(2) pick up signal from wave probes,
-(3) write voltage value to a .txt file with time stamp in the front and signal source signature behind.
-(4) count the operation time, prompt its status on lcd screen.
+(1) Loads SD card
+(2) picks up signal from wave probes,
+(3) writes voltage value to a .txt file with time stamp in the front and signal source signature behind.
+(4) counts the operation time, prompt its status on lcd screen.
 
 Note: Arduno does not compute wave height as voltage-height conversion function changes every time depending on
 the 0 height level. Related information needs to be entered into the python program following its prompts.
 
 What the Python program package does:
-(1) Load all the time, voltage, signal source information into dictionaries
+(1) Loads all the time, voltage, signal source information into dictionaries
     (each signal source has its own dictionary).
-(2) Generate .txt files with time, voltage, and wave height.
-(3) Generate pictures of voltage as a function of time.
+(2) Generates .txt files with time, voltage, and wave height.
+(3) Generates pictures of voltage as a function of time.
 (4) Many other data manipulation methods.
 
 *For programmers: You can chose to only inspect data from a specific time interval and generate pictures accordingly.
- Look into the program code to find definition of this interval method.
+ Look into the program to find definition of this method.
 
 
 
@@ -44,19 +44,19 @@ What the Python program package does:
                                                          ^
 
 What Arduino board does:
-(1) pick up signal from wave probes,
-(2) write voltage value to series monitor with time stamp in the front and signal source signature behind,
+(1) picks up signal from wave probes,
+(2) writes voltage value to series monitor with time stamp in the front and signal source signature behind,
     separated by " ".
-(3) count the operation time
+(3) counts the operation time
 
 Note: Arduno does not compute wave height, as voltage-height conversion function changes every time depending on
 the 0 height level. To get height-time graph, related information needs to be entered into the python program
 
 What the Python program package does:
-(1) Load all the time, voltage, signal source information into lists
+(1) Loads all the time, voltage, signal source information into lists
     (each signal source has its own list).
-(2) Generate .txt files with time and voltage.
-(3) Generate pictures of voltage as a function of time.
+(2) Generates .txt files with time and voltage.
+(3) Generates pictures of voltage as a function of time.
 (4) Other data manipulation methods.
 
 *For programmers: You can chose to only inspect data from a specific time interval and generate pictures accordingly.
@@ -117,12 +117,12 @@ Finally, test the circuit with actual wave gauge output, make sure the voltage o
  * ends to +5V and ground
  * wiper to LCD VO pin (pin 3)
 
-**NOTE: It may be hard to figure out how to connect everything to Arduino R3 with limited space in the first try,
+**NOTE: It may be hard to figure out how to connect everything to Arduino UNO R3 with limited space on the first try,
         please find an example of compact circuit connection in the folder.
 
 * Connecting Arduino to a computer:
 
-1) Connect Arduino to a computer via usb.
+1) Connect Arduino to a computer via USB.
 2) Open Arduino software, select the correct board type (UNO R3) and USB port address.
 3) Open the .ino program and lick the upload button.
 4) Open Serial Monitor in the software, choose show time stamp, click Clear Output and push the reset button
@@ -131,11 +131,11 @@ Finally, test the circuit with actual wave gauge output, make sure the voltage o
 *Note: As data was designed to be reflected on one graph, the suggested maximum recording time is 100 seconds, however,
  this is just a suggestion, exceeding this time by several times will not affect the functionality of the system.
 
-5) To stop the recording, just remove the USB connection.
-6) Then select all the data in the Serial Monitor window, copy and paste the data to data_Arduino_output.txt
+5) To stop recording, remove USB connection.
+6) Then select all the data in the Serial Monitor window, copy and paste data to data_Arduino_output.txt
    and run the main Python program.
 
-* Note: The default output is two graphs of data from the two probes and a graph which includes data from both probes.
+* Note: The default output contains two graphs of data from the two probes and a graph which includes data from both probes.
 
 
 
