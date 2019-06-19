@@ -4,7 +4,7 @@ from DataPoltter import *
 ''' Height conversion is fixed to 2, currently not functional.
         Log:
         Beta Version 0.2
-        Modified on 18 July 2019 by Xiyuan Li'''
+        Modified on 18 June 2019 by Xiyuan Li'''
 
 def main():
     print()
