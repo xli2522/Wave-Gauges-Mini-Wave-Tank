@@ -59,7 +59,7 @@ class dataPlotter(DataADT):
         else:
             ax.plot(x, y, 'r')
 
-        ax.set(xlabel='time (s)', ylabel='voltage (v)',
+        ax.set(xlabel='time (1/10s)', ylabel='voltage (v)',
                title='Voltage / Time' + str(title) )
         ax.grid()
 
