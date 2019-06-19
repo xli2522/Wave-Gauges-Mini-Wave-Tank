@@ -9,7 +9,7 @@ time = datetime.datetime.now()
     **Important: methods in class DataReader are designed to read specific format of .txt file.
         Log:
         Beta Version 0.2
-        Modified on 18 July 2019 by Xiyuan Li
+        Modified on 18 June 2019 by Xiyuan Li
 """
 
 
