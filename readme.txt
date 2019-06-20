@@ -123,8 +123,8 @@ Finally, test the circuit with actual wave gauge output, make sure the voltage o
 * Connecting Arduino to a computer:
 
 1) Connect Arduino to a computer via USB.
-2) Open Arduino software, select the correct board type (UNO R3) and USB port address.
-3) Open the .ino program and lick the upload button.
+2) Open Arduino IDE, select the correct board type (UNO R3) and USB port address.
+3) Open the .ino program and click the upload button.
 4) Open Serial Monitor in the software, choose show time stamp, click Clear Output and push the reset button
    on the board at the same time to start a new recording. Time elapsed will be shown on the LCD screen.
 
