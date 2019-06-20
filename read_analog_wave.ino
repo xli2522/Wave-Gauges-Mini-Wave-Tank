@@ -101,9 +101,9 @@ void loop() {
    */
    
   // Generate data information string for probe2
-  // Note probe2 should be connected to analog input pin A1
+  // Note probe2 should be connected to analog input pin A4
   String probe2String = "";
-  int analogPin2 = 1;
+  int analogPin2 = 4;
   int sensor2 = analogRead(analogPin2);
   probe2String = String(sensor2) + " sensor2";
 
