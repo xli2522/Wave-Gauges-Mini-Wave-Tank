@@ -6,8 +6,8 @@ time = datetime.datetime.now()
     Created on May 12th 2019 by Xiyuan Li
     **Important: methods in class DataReader are designed to read specific format of .txt file.
         Log:
-        Beta Version 0.2
-        Modified on 18 June 2019 by Xiyuan Li
+        Beta Version 0.2.1
+        Modified on 24 June 2019 by Xiyuan Li
 """
 
 class DataADT:
@@ -74,7 +74,7 @@ class DataADT:
         print("Time:", self.getTime(), ",", "Voltage", self.getVoltage(),
               ",", "Source:", self.getSignal(), ",", "Height", self.getHeight())
 
-##################################################
+########################DataReader##########################
 dataCat1 = []
 dataCat2 = []
 
@@ -216,7 +216,7 @@ class dataReader(DataADT):
         finally:
             savefile.close()
 
-#######################################################
+#########################DataPlotter##############################
 dataCat = []
 dataCat3 = []
 dataCat4 = []
@@ -299,7 +299,7 @@ class dataPlotter(DataADT):
         dataCat3.clear()
         dataCat4.clear()
         plt.show()
-
+        
 def main():
     print()
     #print("Look up sensor information")
