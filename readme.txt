@@ -14,7 +14,7 @@ What Arduino board does:
 (1) Loads SD card
 (2) picks up signal from wave probes,
 (3) writes voltage value to a .txt file with time stamp in the front and signal source signature behind.
-(4) counts the operation time, prompt its status on lcd screen.
+(4) counts the operation time, prompt its status on lcd screen. (currently not avaliable due to limited digital connection)
 
 Note: Arduno does not compute wave height as voltage-height conversion function changes every time depending on
 the 0 height level. Related information needs to be entered into the python program following its prompts.
@@ -132,7 +132,7 @@ Finally, test the circuit with actual wave gauge output, make sure the voltage o
  this is just a suggestion, exceeding this time by several times will not affect the functionality of the system.
 
 5) To stop recording, remove USB connection.
-6) Then select all the data in the Serial Monitor window, copy and paste data to data_Arduino_output.txt
+6) Then select all the data in the Serial Monitor window, copy and paste data to ADL.txt
    and run the main Python program.
 
 * Note: The default output contains two graphs of data from the two probes and a graph which includes data from both probes.
@@ -156,6 +156,7 @@ DataReader.py
 plotter.py
 main.py
 read_analog_wave.ino
+read_analog_wave_sd.ino
 
 *****************************************
 DataADT.py
@@ -242,5 +243,18 @@ read_analog_wave.ino
 
 	*Note: delay = 10 ms. Arduino picks up 100*2(probes) data each second.
 	*Note: probe1 = analog pin A0; probe2 = analog pin A4
+
+******************************************
+read_analog_wave_sd.ino
+
+void setup()
+	Sets up the port and SD card
+
+	void loop()
+	Generates a string with data information for probe1 and probe2 and export to ADL.txt on SD card.
+	Generates a string with data information for probe1 and probe2 and export to serial output window.
+
+	*Note: delay = 10 ms. Arduino picks up 100*2(probes) data each second.
+	****** DIFFERENT CONNECTION (due to arduino for loop): probe1 = analog pin A0; probe2 = analog pin A1
 
 
