@@ -11,7 +11,7 @@ def main():
     #print("Look up sensor information")
     #sensorSig = input("Enter the file title. (Sensor signature)")
 
-    cc = dataReader("data_Arduino_output.txt")
+    cc = dataReader("ADL.txt")
     # Save your data to this .txt file
 
 
