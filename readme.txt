@@ -14,7 +14,7 @@ What Arduino board does:
 (1) Loads SD card
 (2) picks up signal from wave probes,
 (3) writes voltage value to a .txt file with time stamp in the front and signal source signature behind.
-(4) counts the operation time, prompt its status on lcd screen. (currently not avaliable due to limited digital connection)
+(4) counts the operation time, prompt its status on lcd screen. (currently not avaliable due to limited fast digital connection)
 
 Note: Arduno does not compute wave height as voltage-height conversion function changes every time depending on
 the 0 height level. Related information needs to be entered into the python program following its prompts.
