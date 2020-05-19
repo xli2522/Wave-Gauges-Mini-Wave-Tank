@@ -1,4 +1,4 @@
-How this system work:
+
 (Last Edited June 2019 by Xiyuan Li)
 
                                         *********** SD CARD ************
